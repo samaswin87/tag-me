@@ -1,0 +1,8 @@
+Description:
+    Create view folder and view file
+
+Example:
+    rails generate view folder view_file
+
+    This will create:
+        app/views/folder/view_file.html.erb
