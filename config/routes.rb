@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   get '/home', to: "home#index"
 
+  get '/profile', to: "home#show"
+
 end
