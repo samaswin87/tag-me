@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!(email:'aswin@company.com', password: 'aswin123', password_confirmation: 'aswin123',confirmed_at: '2019-08-04 04:51:43', current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1")
+User.create!(email:'test_1@company.com', password: 'test123', password_confirmation: 'test123',confirmed_at: '2019-08-04 04:51:43', current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1")
+User.create!(email:'test_2@company.com', password: 'test123', password_confirmation: 'test123',confirmed_at: '2019-08-04 04:51:43', current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1")
+User.create!(email:'test_3@company.com', password: 'test123', password_confirmation: 'test123',confirmed_at: '2019-08-04 04:51:43', current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1")
+User.create!(email:'test_4@company.com', password: 'test123', password_confirmation: 'test123',confirmed_at: '2019-08-04 04:51:43', current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1")
+User.create!(email:'test_5@company.com', password: 'test123', password_confirmation: 'test123',confirmed_at: '2019-08-04 04:51:43', current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1")
+
