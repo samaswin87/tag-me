@@ -1,28 +1,19 @@
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-
 //= require jquery
 //= require jquery_ujs
-
-
-//plugins
-import "regenerator-runtime/runtime";
-import "@stimulus/polyfills";
-import "bootstrap/dist/js/bootstrap.min";
-import "admin-lte/dist/js/adminlte.min"
-
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
-
-
+//= require rails-ujs
+//= require ckeditor/init
+//= require activestorage
+//= require js/bootstrap.bundle.js
+//= require js/charts/chart.min
+//= require js/color.js
+//= require js/common.js
+//= require js/datatable/jquery.dataTables.min
+//= require js/datepicker/bootstrap-datepicker.min
+//= require js/fullcalendar/fullcalendar.min
+//= require js/fullcalendar/moment.min
+//= require js/googleMaps/load-google-maps-api
+//= require js/lodash.js
+//= require js/masonry.pkgd.min.js
+//= require js/perfect-scrollbar/perfect-scrollbar.min
+//= require js/skycons/skycons
+//= require js/vector-maps/jquery-jvectormap.min

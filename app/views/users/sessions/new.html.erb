@@ -1,53 +1,51 @@
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="#"><b>Tag</b>ME</a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
-
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="input-group mb-3">
-          <%= f.email_field :email, autofocus: true, :class => 'form-control', autocomplete: "email" %>
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <%= f.password_field :password, autocomplete: "current-password", :class => 'form-control' %>
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <% if devise_mapping.rememberable? %>
-              <div class="icheck-primary">
-                <%= f.check_box :remember_me %>
-                <label for="remember">
-                  Remember Me
-                </label>
-              </div>
-            <% end %>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      <% end %>
-
-      <%= render "users/shared/links" %>
+<body class="app">
+    <div id='loader'>
+      <div class="spinner"></div>
     </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
-</body>
+
+    <script>
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        setTimeout(() => {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+    </script>
+    <div class="peers ai-s fxw-nw h-100vh">
+      <div class="d-n@sm- peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" style='background-image: url("<%= asset_path( 'bg.jpg' ) %>")'>
+        <div class="pos-a centerXY">
+          <div class="bgc-white bdrs-50p pos-r" style='width: 120px; height: 120px;'>
+            <img class="pos-a centerXY" src="<%= asset_path( 'logo.png' ) %>" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
+        <h4 class="fw-300 c-grey-900 mB-40">Login</h4>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group">
+            <label class="text-normal text-dark">Username</label>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'form-control'%>
+          </div>
+          <div class="form-group">
+            <label class="text-normal text-dark">Password</label>
+            <%= f.password_field :password, autocomplete: "current-password", :class => 'form-control' %>
+          </div>
+          <div class="form-group">
+            <div class="peers ai-c jc-sb fxw-nw">
+              <div class="peer">
+                <div class="checkbox checkbox-circle checkbox-info peers ai-c">
+                  <input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer">
+                  <label for="inputCall1" class=" peers peer-greed js-sb ai-c">
+                    <span class="peer peer-greed">Remember Me</span>
+                  </label>
+                </div>
+              </div>
+              <div class="peer">
+                <button class="btn btn-primary">Login</button>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </body>
