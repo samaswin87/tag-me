@@ -1,46 +1,23 @@
-<div class="limiter">
-    <div class="container-login100">
-      <div class="wrap-login100">
-        <div class="login100-form-title" style='background-image: url("<%= asset_path( 'bg-01.jpg' ) %>")'>
-          <span class="login100-form-title-1">
-            Sign In
-          </span>
-        </div>
-
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "login100-form validate-form"}) do |f| %>
-          <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-            <span class="label-input100">Username</span>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'input100'%>
-            <span class="focus-input100"></span>
-          </div>
-
-          <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
-            <span class="label-input100">Password</span>
-            <%= f.password_field :password, autocomplete: "current-password", :class => 'input100' %>
-            <span class="focus-input100"></span>
-          </div>
-
-          <div class="flex-sb-m w-full p-b-30">
-            <div class="contact100-form-checkbox">
-              <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-              <label class="label-checkbox100" for="ckb1">
-                Remember me
-              </label>
-            </div>
-
-            <div>
-              <a href="#" class="txt1">
-                Forgot Password?
-              </a>
-            </div>
-          </div>
-
-          <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
-              Login
-            </button>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
+<div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+            <a href="#" class="forgot-password">
+                Sign Up
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
